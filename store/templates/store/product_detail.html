@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'store/css/cyberpunk.css' %}">
+
+</head>
+<body>
+<div class="container mt-4">
+    <h1>{{ product.title }}</h1>
+    {% if product.image %}
+        <img src="{{ product.image.url }}" alt="{{ product.title }}" class="img-fluid">
+    {% endif %}
+    <p>{{ product.description }}</p>
+    <p>Price: ${{ product.price }}</p>
+    <a href="{% url 'store:add_to_cart' product_id=product.id %}" class="btn btn-success">Add to Cart</a>
+    <br><br>
+    <a href="{% url 'store:product_list' %}">Back to Products</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+/* custom.css: Two-color theme with black background, white text, and white-blueish accents */
+
+/* Base Styling */
+body {
+    background-color: #060505;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    background-color: #000; 
+    border-bottom: 2px solid #fff;
+  }
+  
+  .navbar-brand,
+  .nav-link {
+    color: #fff !important;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* On hover, change text to a cool blue-white hue */
+  .navbar-brand:hover,
+  .nav-link:hover {
+    color: #00aeff !important;
+  }
+  /* Navbar Toggler (for mobile views) */
+.navbar-toggler {
+    border-color: #fff;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: none;
+    width: 30px;
+    height: 30px;
+    background-color: #2d3a60 !important;
+    border-radius: 3px;
+  }
+  
+  /* Headings (h1, h2, h3) with subtle hover effect */
+  h1, h2, h3 {
+    color: #fff;
+    transition: color 0.3s;
+  }
+  h1:hover, h2:hover, h3:hover {
+    color: #00aeff;
+  }
+  
+  /* Card Styling for Product Listings */
+  .card {
+    background-color: #242121;
+    border: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.293);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 174, 255, 0.4); /* blueish glow effect */
+  }
+  
+  /* Button Styling */
+  .btn-primary {
+    background-color: #fff;
+    color: #060622;
+    border: 2px solid #fff;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  }
+  .btn-primary:hover {
+    background-color: #00aeff;
+    color: #fff;
+    transform: translateY(-2px);
+    border-color: #00aeff;
+  }
+  
+  /* TABLE Styling for the Cart & Data Tables */
+.table {
+    background-color: #000;
+    color: #fff;
+  }
+  .table thead th {
+    background-color: #000;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+  }
+  .table tbody td {
+    border-top: 1px solid #fff;
+  }
+  /* Footer Styling (if applicable) */
+  .footer {
+    background-color: #c7d6f6;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    border-top: 1px solid #fff;
+  }
+  
+  /* Add a subtle neon glow animation on the brand when hovered */
+  @keyframes neonGlow {
+    0% {
+      text-shadow: 0 0 5px #fff;
+    }
+    50% {
+      text-shadow: 0 0 15px #00aeff;
+    }
+    100% {
+      text-shadow: 0 0 5px #fff;
+    }
+  }
+  .navbar-brand:hover {
+    animation: neonGlow 1.5s ease-in-out infinite;
+  }
+  
